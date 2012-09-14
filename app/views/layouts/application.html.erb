@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <%= link_to "sample app", '#', id: "logo" %>
+          <nav>
+            <ul class="nav pull-right">
+              <li><%= link_to "Home",    '/' %></li>
+              <li><%= link_to "Contact",    '/welcome/contact' %></li>
+              <li><%= link_to "About Us", '/welcome/about' %></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+<%# cache "testomony#{Date.today}" do %>
+<%# Twitter.favorites("jagdish104", count: 4).each do |tweet| %>
+<p><%#= tweet.text %></p>
+<p><%#= tweet.user.screen_name %></p>
+<%# end %>
+<%# end %>
+    <%= render 'layouts/header' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%#= debug(params) if Rails.env.development? %>
+    </div>
+</body>
+</html>
+
