@@ -114,6 +114,7 @@ GEM
     multipart-post (1.1.5)
     mysql2 (0.3.11)
     nokogiri (1.5.5)
+    pg (0.14.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -216,6 +217,7 @@ DEPENDENCIES
   guard-spork (= 0.3.2)
   jquery-rails
   mysql2
+  pg
   rails (= 3.2.6)
   rspec-rails
   sass-rails (~> 3.2.3)
